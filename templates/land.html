@@ -43,19 +43,22 @@
             />
           </a>
 
-          <!-- PERFIL -->
-          <a
-            href="{{ url_for('cadastro') }}"
-            class="perfil-btn"
-            title="Minha conta"
-          >
-            <img
-              src="{{ url_for('static', filename='imagens/Avatar_perfil.png') }}"
-              width="60"
-              height="50"
-              alt="Perfil"
-            />
-          </a>
+          <!-- PERFIL COM DROPDOWN -->
+          <details class="perfil-dropdown">
+            <summary aria-label="Abrir menu">
+              <img class="perfil-btn"
+                src="{{ url_for('static', filename='imagens/Avatar_perfil.png') }}"
+                width="60"
+                height="40"
+                alt="Perfil"
+              />
+            </summary>
+
+            <div class="dropdown">
+              <a href="{{ url_for('login') }}"> Entrar </a>
+              <a href="{{ url_for('cadastro') }}"> Criar conta </a>
+            </div>
+          </details>
 
           <!-- MENU -->
           <details class="menu-simples">
