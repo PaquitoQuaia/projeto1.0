@@ -10,7 +10,7 @@ from flask import (
 import mysql.connector
 import os
 
-from mysql.connector import Error
+from mysql.connector import Error, IntegrityError
 
 from werkzeug.security import (
     generate_password_hash,
@@ -53,8 +53,7 @@ def fechar_banco(conexao, cursor):
     if conexao:
         conexao.close()
 
-
-
+        
 # =========================================================
 # CONFIGURAÇÃO
 # =========================================================
